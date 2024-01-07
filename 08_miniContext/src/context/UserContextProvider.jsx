@@ -1,11 +1,12 @@
 import React from "react";
 import UserContext from "./UserContext";
 
-const UserContextProvider = ({ childern }) => {
+const UserContextProvider = ({ children }) => {
   const [user, setUser] = React.useState(null);
+
   return (
     <UserContext.Provider value={{ user, setUser }}>
-      {childern}
+      {children}
     </UserContext.Provider>
   );
 };
